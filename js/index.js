@@ -128,9 +128,9 @@ if(evenInfo.key ==="Enter"){
   
   //=============call to function to show temp in day
   document.getElementById("am12").innerHTML =  citySearch.forecast.forecastday[0].hour[0].temp_c;
-  document.getElementById("am12").innerHTML =  citySearch.forecast.forecastday[0].hour[6].temp_c;
-  document.getElementById("am12").innerHTML =  citySearch.forecast.forecastday[0].hour[12].temp_c;
-  document.getElementById("am12").innerHTML =  citySearch.forecast.forecastday[0].hour[18].temp_c;
+  document.getElementById("am6").innerHTML =  citySearch.forecast.forecastday[0].hour[6].temp_c;
+  document.getElementById("pm12").innerHTML =  citySearch.forecast.forecastday[0].hour[12].temp_c;
+  document.getElementById("pm6").innerHTML =  citySearch.forecast.forecastday[0].hour[18].temp_c;
 
     //=============call to function to show icon in day
     document.getElementById("dicon1").innerHTML =  `<img src="${citySearch.forecast.forecastday[0].day.condition.icon}"> `;
