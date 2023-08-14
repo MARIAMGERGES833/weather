@@ -64,7 +64,7 @@ if(inputList.value == it ){ langCode = it }
 if(inputList.value == ko ){ langCode = ko }
 if(inputList.value == ru){ langCode = ru }
 
-    let res = await fetch(` http://api.weatherapi.com/v1/forecast.json?key=${myKey}&q=${name}&days=3&lang=${langCode}`);
+    let res = await fetch(` https://api.weatherapi.com/v1/forecast.json?key=${myKey}&q=${name}&days=3&lang=${langCode}`);
     let allData = await res.json();
    console.log(allData);
    displayData(allData)
