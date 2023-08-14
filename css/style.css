@@ -1,0 +1,175 @@
+/*
+font-family: 'Pacifico', cursive;
+font-family: 'PT Sans Caption', sans-serif;
+*/
+
+body{
+    font-family: 'Poppins', sans-serif;
+
+}
+:root{
+    --primary-color:#070150;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.weather{
+    background-image: url(../ireland-1971997_1920.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height:100vh ;
+}
+nav{
+    background-color: var(--primary-color);
+}
+nav img{
+    width: 3rem ;
+    filter: grayscale(100%);
+    animation: cloud 2s infinite;
+}
+@keyframes cloud {
+    0%,100%{
+        filter: grayscale(100%);
+    }
+    50%{
+        filter: grayscale(0%);
+    }
+}
+.btn-darkBlue {
+    --bs-btn-color: white;
+    --bs-btn-border-color: var(--primary-color);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #12078a ;
+    --bs-btn-hover-border-color:#12078a ;
+    background-color: var(--primary-color);
+}
+.form-control:focus {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0.25rem 0.25rem rgba(13,110,253,.25);
+    background-color: #ffffff49;
+}
+.form-control{
+background-color: rgba(255,255,255,.5);
+}
+.row .box{
+    background-color: #08015083;
+    color: white;
+}
+.row .date{
+    background-color: rgba(255,255,255,.8);
+    color: var(--primary-color);
+}
+.row h2{
+    font-size: 4rem;
+}
+.row h3{
+    font-size: 2.5rem;
+}
+.row .dgree{
+min-height: 280px;    /*???????????????*/
+}
+.row p{
+    font-weight: 600;
+}
+.row #text , .row #text2 , .row #text3{
+    color:rgb(247, 239, 5);
+    font-weight: 700;
+}
+.row .usertemp{
+    font-size: 4rem;
+
+}
+
+#icon{
+    width: 5rem;
+}
+.temprature img{
+    width: 50px;
+
+}
+.breadcrumb-item.active{
+    color: #fff;
+}
+section{
+    background-color: rgba(8, 1, 80, 0.374);
+    min-height: 100vh;
+}
+#contactContent .container nav {
+    border-radius: 40px;
+    padding: 20px 30px;
+}
+#contactContent .container nav a{
+    color: rgb(196, 195, 195);
+}
+
+.breadcrumb {
+     --bs-breadcrumb-margin-bottom: 0;
+}
+.breadcrumb-item+.breadcrumb-item::before{
+    color:rgb(196, 195, 195);
+}
+#contactContent .container .mab{
+    height: 325px;
+}
+
+#contactContent .container .boxContact a:hover{
+color: var(--primary-color);
+background-color: rgba(255, 255, 255, 0.334);
+}
+#contactContent .container .boxContact{
+background-color: var(--primary-color);
+color: white;
+}
+.form-group{
+    background-color: transparent;
+    border: none;
+}
+.form-group input{
+    padding: 10px 15px;
+    margin-bottom: 15px;
+border-color: transparent;
+}
+textarea{
+    resize: none;
+    height: 100px;
+    width: 100%;
+}
+#contactContent .container .boxContact .textContact{
+    color: rgb(184, 183, 183);
+}
+footer{
+    background-color: var(--primary-color);
+}
+/* footer .btn-sub {
+    position: absolute;
+    top: 40%;
+    transform:translateY(-50%);
+    left: 41%;
+    background-color: var(--primary-color);
+    color: #fff;
+} */
+/* footer .btn {
+    --bs-btn-hover-border-color : var(--primary-color);
+} */
+
+
+#today {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 25px;
+}
+.table>:not(caption)>*>*{
+    background-color: rgb(4, 1, 30);
+    color: #fff;
+    border-color:transparent;
+}
+
+@media screen and (max-width:1200px) {
+    .boxContact input{
+        width: 100%;
+    }
+}

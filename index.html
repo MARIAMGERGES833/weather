@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <!--+++  favicon   ++++-->
+    <link rel="icon" href="logo.png">
+    <!--+++  foooooooonts   ++++-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <!--+++  sweetalert2   ++++-->
+    <link rel="stylesheet" href="css/sweetalert2.min (1).css">
+
+    <!--+++  fontawesome   ++++-->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!--+++   bootstrap  ++++-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--+++   main style sheet ++++-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="weather" class="weather">
+        <div id="weatherContent" class="d-block">
+
+
+            <nav class="navbar navbar-expand-lg navbar-dark  mb-3">
+                <div class="container  d-flex align-items-center justify-content-center">
+                    <a class="navbar-brand d-flex align-items-center justify-content-center" href="index.html"><img
+                            src="logo.png" alt="logo">
+                        <h1 class="fs-5 ms-3">Weather</h1>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                            <li class="nav-item me-3 ">
+                                <a class="nav-link active" id="home" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item me-3">
+                                <a class="nav-link" id="news" href="#">News</a>
+                            </li>
+                            <li class="nav-item me-3">
+                                <a class="nav-link" id="live" href="#">Live cameras</a>
+                            </li>
+                            <li class="nav-item me-3">
+                                <a class="nav-link" id="photos" href="#">Photos</a>
+                            </li>
+                            <li class="nav-item me-3">
+                                <a class="nav-link" id="contact" href="#contact">Contact</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+
+
+
+
+            <div class="container">
+                <p id="today"></p>
+                <div class="d-flex mb-3" role="search">
+                    <input list="languge" name="lang" id="inputList" class="form-control w-25 rounded-4 me-2"
+                        placeholder="English">
+                    <datalist id="languge">
+                        <option value="Arabic" id="Arabic">
+                        <option value="Bengali" id="Bengali">
+                        <option value="Bulgarian" id="Bulgarian">
+                        <option value="Chinese Simplified" id="Chinese">
+                        <option value="Danish" id="Danish">
+                        <option value="French" id="French">
+                        <option value="German" id="German">
+                        <option value="Italian" id="Italian">
+                        <option value="Korean" id="Korean">
+                        <option value="Russian" id="Russian">
+                    </datalist>
+                    <input id="searchInput" class="form-control me-2 rounded-4" type="search"
+                        placeholder="Find your weather..." aria-label="Search">
+                    <button id="search" class="btn btn-darkBlue" type="submit">Search</button>
+                </div>
+
+
+
+
+                <div class="content">
+                    <div class="row ">
+                        <div class="col-md-4 mb-md-0 mb-sm-3">
+                            <div class="box col1 rounded-start-3 overflow-hidden ">
+                                <div class="date p-3 pb-0 d-flex align-items-center justify-content-center">
+                                    <!-- <p>Thursday</p> -->
+                                    <p id="dateFirstDay">2023-05-1 </p>
+                                </div>
+                                <div class="dgree p-3">
+                                    <p class="fs-3" id="userCountry">Rome</p>
+                                    <div class="temprature d-flex align-items-center justify-content-between ">
+                                        <div class="usertemp d-flex align-items-center ">
+                                            <h2 id="userTemp">13</h2>
+                                            <p><sup>o</sup>C</p>
+                                        </div>
+                                        <p id="icon"><img src="113 (1).png"></p>
+                                    </div>
+                                    <span id="text">sunny</span>
+                                    <div class="wind mt-4 d-flex align-items-center">
+                                        <div class="me-3"><i class="fa-solid fa-umbrella "></i> <span
+                                                id="rain">20</span>%</div>
+                                        <div class="me-3"><i class="fa-solid fa-wind me-1"></i><span
+                                                id="wind">18</span>Km/h</div>
+                                        <div class="me-3"><i class="me-1 fa-solid fa-compass"></i><span
+                                                id="direction">East</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 text-center mb-md-0 mb-sm-3">
+                            <div class="box col1  overflow-hidden ">
+                                <div class="date  p-3 pb-0  d-flex align-items-center justify-content-center ">
+                                    <p id="dateSecoundDay">2023-05-2 </p>
+                                </div>
+                                <div class="dgree p-3 ">
+                                    <div class="temprature ">
+                                        <p id="iconSecondDay"><img src="113 (1).png"></p>
+                                        <div class="usertemp d-flex align-items-center justify-content-center ">
+                                            <h2 id="maxTemp">32</h2>
+                                            <p><sup>o</sup>C</p>
+                                        </div>
+                                        <p id="minTemp">24.3</p>
+                                    </div>
+                                    <span id="text2">sunny</span>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 text-center mb-md-0 mb-sm-3 ">
+                            <div class="box col1 rounded-end-3 overflow-hidden ">
+                                <div class="date  p-3 pb-0 d-flex align-items-center justify-content-center">
+                                    <p id="dateThirdDay">2023-05-3 </p>
+                                </div>
+                                <div class="dgree  p-3">
+                                    <div class="temprature ">
+                                        <p id="iconThirdDay"><img src="113 (1).png"></p>
+                                        <div class="usertemp d-flex align-items-center justify-content-center ">
+                                            <h2 id="maxTemp3">32</h2>
+                                            <p><sup>o</sup>C</p>
+                                        </div>
+                                        <p id="minTemp3">24.3</p>
+                                    </div>
+                                    <span id="text3">sunny</span>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="weathertoday text-center fw-bold mt-5">
+                            <table class="table rounded-3">
+                                <tr>
+                                    <td class="fs-5">Today</td>
+                                    <td>At 12:00Am</td>
+                                    <td>At 06:00Am</td>
+                                    <td>At 12:00Pm</td>
+                                    <td>At 06:00Pm</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><div class="d-flex justify-content-center"><p id="am12">25</p><sup>o</sup>C </div></td>
+                                    <td><div class="d-flex justify-content-center"><p id="am6">25</p><sup>o</sup>C </div></td>
+                                    <td><div class="d-flex justify-content-center"><p id="pm12">25</p><sup>o</sup>C </div></td>
+                                    <td><div class="d-flex justify-content-center"><p id="pm6">25</p><sup>o</sup>C </div></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td id="dicon1"><img src="113 (1).png"></td>
+                                    <td id="dicon2"><img src="113 (1).png"></td>
+                                    <td id="dicon3"><img src="113 (1).png"></td>
+                                    <td id="dicon4"><img src="113 (1).png"></td>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <section id="contactContent" class="contact d-none">
+            <nav class="navbar navbar-expand-lg navbar-dark  mb-5">
+                <div class="container  d-flex align-items-center justify-content-center">
+                    <a class="navbar-brand d-flex align-items-center justify-content-center" href="index.html"><img
+                            src="logo.png" alt="logo">
+                        <h1 class="fs-5 ms-3">Company name</h1>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                            <li class="nav-item me-3 ">
+                                <a class="nav-link active" id="home" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item me-3">
+                                <a class="nav-link" id="news" href="#">News</a>
+                            </li>
+                            <li class="nav-item me-3">
+                                <a class="nav-link" id="live" href="#">Live cameras</a>
+                            </li>
+                            <li class="nav-item me-3">
+                                <a class="nav-link" id="photos" href="#">Photos</a>
+                            </li>
+                            <li class="nav-item me-3">
+                                <a class="nav-link" id="contact" href="#contact">Contact</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+            <div class="container">
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="mb-5">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Contact</li>
+                    </ol>
+                </nav>
+
+
+                <div class="row">
+                    <div class="col-md-6 mb-md-0 mb-sm-3">
+                        <div class="boxContact p-3 rounded-2">
+                            <div class="mab"></div>
+                            <p><i class="fa-solid fa-location-dot me-2"></i> Company Name INC. </p>
+                            <p class="mb-4 ms-3">2803 Avenue Street, Los Angeles</p>
+                            <div class="connect">
+                                <a href="tel:+1 800 314 235" class="me-3"><i class="fa-solid fa-phone me-2"></i>+1 800
+                                    314 235</a>
+                                <a href="mailto:contact@compnyname.com"><i
+                                        class="fa-solid fa-envelope me-2"></i>contact@compnyname.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="boxContact rounded-2 p-3">
+                            <h3>Contact us </h3>
+                            <p class="textContact">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi
+                                consectetur inventore ducimus, facilis, numquam id soluta omnis eius recusandae nesciunt
+                                vero repellat harum cum. Nisi facilis odit hic, ipsum sed!</p>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="item">
+                                        <div class="form-group">
+                                            <input class="rounded-4" type="text" placeholder="Your Name ...">
+                                            <input class="rounded-4" type="text" placeholder="Company name ...">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="item">
+                                        <div class="form-group">
+                                            <input class="rounded-4" type="email" placeholder="Your Email ...">
+                                            <input class="rounded-4" type="text" placeholder="Website ...">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <textarea class="rounded-4 p-3" placeholder="Message ..."></textarea>
+                            </div>
+                            <div class="btnSubmit d-flex align-items-end justify-content-end ">
+                                <button type="submit" class="btn btn-light">submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <footer class="p-4 mt-5">
+                <div class="form-group">
+                    <input class="rounded-4 w-50" type="text" placeholder="Enter your email to subscribe">
+                    <button class="btn btn-light" type="submit">Subscribe</button>
+                </div>
+            </footer>
+        </section>
+    </div>
+
+
+
+
+
+
+    <script src="js/sweetalert2.all.min (1).js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
